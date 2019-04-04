@@ -7,6 +7,10 @@
  function countDown (secs, elem) {
   var element = document.getElementById(elem);
   element.innerHTML = "Time remaining  "+secs+"  seconds";
+  if(secs < 1) {
+    clearTimeout(timer);
+    element.innerHTML = '<h2>Time is up </h2>';
+  }
   
   secs--; 
   var timer = setTimeout('countDown('+secs+', "'+elem+'")', 1000);
