@@ -1,18 +1,8 @@
 
-var counter = 0;
-var timeleft = 30;
 
-function setup() {
-  noCanvas();
-var timer = select("#timer")
-timeleft.html(timeleft-counter);
 
-function timeIt() {
-  start++;
-  timer.html("timeleft-counter");
-}
-setInterval (timeIt, 1000);
-}
+
+
 
 var questions = 
 [

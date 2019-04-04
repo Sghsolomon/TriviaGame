@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Totally Trivial Trivia</title><br><br>
+<head>    
+ <meta charset="utf-8">
+ <script type="text/javascript">
+ 
+ function countDown (secs, elem) {
+  var element = document.getElementById(elem);
+  element.innerHTML = "Time remaining  "+secs+"  seconds";
   
+  secs--; 
+  var timer = setTimeout('countDown('+secs+', "'+elem+'")', 1000);
+      }
+ 
+ </script>
   
+  <title>Totally Trivial Trivia</title>
 </head>
 <body>
-  <p id="timer">Start</p>
-  
-  
-
-  <script src="asset/javascript/app.js"></script>
+    <div id="status"></div>
+    <script type="text/javascript">countDown (30, "status")</script>
+    <script  src="asset/javascript/app.js"></script>
 
   </body>
 </html>
